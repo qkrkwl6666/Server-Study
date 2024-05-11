@@ -1,1 +1,5 @@
-﻿  ServerCore.vcxproj -> C:\Users\park\Desktop\Github\GameServer\Server\Libraries\Debug\ServerCore.lib
+﻿  pch.cpp
+  CorePch.cpp
+  Types.h
+  코드를 생성하고 있습니다...
+  ServerCore.vcxproj -> C:\Users\park\Desktop\Github\GameServer\Libraries\Debug\ServerCore.lib

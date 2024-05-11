@@ -8,5 +8,6 @@
 #pragma comment(lib, "Release\\ServerCore.lib")
 #endif
 
-
+#include <thread>
+#include <atomic>
 #include "CorePch.h"
