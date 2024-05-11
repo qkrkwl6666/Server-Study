@@ -9,11 +9,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameServer.cpp">
+    <ClCompile Include="2024-05-09_Multithread.cpp">
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="2024-05-11_Atomic.cpp">
+      <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
