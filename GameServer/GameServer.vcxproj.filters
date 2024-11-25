@@ -21,6 +21,12 @@
     <ClCompile Include="2024-05-11_Lock.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="2024-05-12_DeadLock.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="2024-11-25_SpinLock.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
