@@ -1,2 +1,2 @@
 ﻿  2024-11-25_SpinLock.cpp
-  GameServer.vcxproj -> C:\Users\park\Desktop\Github\GameServer\Binary\Debug\GameServer.exe
+LINK : fatal error LNK1104: 'Debug\ServerCore.lib' 파일을 열 수 없습니다.

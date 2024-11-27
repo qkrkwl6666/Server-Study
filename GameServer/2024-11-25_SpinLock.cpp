@@ -16,6 +16,9 @@ public:
 		while (isLock.compare_exchange_strong(expected, desired) == false)
 		{
 			expected = false;
+
+			this_thread::sleep_for(100ms);
+			//this_thread::yield();
 		}
 
 	}
