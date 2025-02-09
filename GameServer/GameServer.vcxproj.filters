@@ -27,6 +27,18 @@
     <ClCompile Include="2024-11-25_SpinLock.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Future.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Cache.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CpuPipeline.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
