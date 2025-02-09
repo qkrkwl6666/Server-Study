@@ -18,6 +18,9 @@ public:
 			this_thread::sleep_for(100ms);
 			this_thread::yield();
 			expected = false;
+
+			this_thread::sleep_for(100ms);
+			//this_thread::yield();
 		}
 
 	}
