@@ -46,21 +46,21 @@
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="ConcurrentQueue.cpp">
-      <Filter>Utils</Filter>
+      <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="ConcurrentStack.cpp">
-      <Filter>Utils</Filter>
+      <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQueue.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
     <ClInclude Include="ConcurrentStack.h">
-      <Filter>Utils</Filter>
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ConcurrentQueue.h">
+      <Filter>Main</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
