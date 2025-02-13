@@ -8,7 +8,7 @@
 #include "ConcurrentStack.h"
 
 LockQueue<int32> q;
-LockFreeStack<int32> s;
+LockFreeStack2<int32> s;
 
 void Push()
 {
@@ -27,9 +27,16 @@ void Pop()
 	{
 		int32 value = 0;
 
-		if (s.TryPop(OUT value) == true)
+		//if (s.TryPop(OUT value) == true)
+		//{
+		//	cout << value << endl;
+		//}
+
+		auto data = s.TryPop();
+
+		if (data != nullptr)
 		{
-			cout << value << endl;
+			cout << *data << endl;
 		}
 
 	}
