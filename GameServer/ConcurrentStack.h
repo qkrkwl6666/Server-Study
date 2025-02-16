@@ -315,6 +315,9 @@ public:
 			{
 				return shared_ptr<T>();
 			}
+
+			// external = 1 -> 2(³ª + 1) -> 4(³² + 2)
+			// internal = 0 
 			
 			// ¼ÒÀ¯±Ç È¹µæ (ptr->next ·Î head¸¦ ¹Ù²ãÄ¡±â ÇÑ ¾Ö°¡ ÀÌ±è)
 			if (_head.compare_exchange_strong(oldHead, ptr->next))
