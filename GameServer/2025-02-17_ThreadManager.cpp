@@ -8,6 +8,15 @@
 #include "CoreGlobal.h"
 #include "ThreadManager.h"
 
+//mutex m;
+//
+//list<int32> GetRewardList(int questId)
+//{
+//	list<int32> item = TODO;
+//
+//	return item;
+//}
+
 CoreGlobal Core;
 
 void ThreadMain()

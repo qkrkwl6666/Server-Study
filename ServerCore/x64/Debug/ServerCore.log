@@ -1,7 +1,9 @@
 ﻿  pch.cpp
+C:\Users\park\Desktop\Github\GameServer\ServerCore\Lock.h(24,3): warning C4369: 'Lock::WRITE_THREAD_MASK':  열거자 값 '4294901760'을(를) 'int'(으)로 나타낼 수 없습니다. 값은 '4294901760'입니다.
   CoreGlobal.cpp
   CorePch.cpp
   CoreTLS.cpp
+  Lock.cpp
   ThreadManager.cpp
   Types.h
   코드를 생성하고 있습니다...

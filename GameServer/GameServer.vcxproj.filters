@@ -54,6 +54,9 @@
     <ClCompile Include="2025-02-17_ThreadManager.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Reader-Writer-Lock.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
