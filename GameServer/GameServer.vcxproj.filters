@@ -7,6 +7,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{30bac461-64e1-4680-bb45-1585db2cef6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\DeadLockProfiler">
+      <UniqueIdentifier>{7470faa1-2c4a-4f81-bdee-08d340d94e73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2024-05-09_Multithread.cpp">
@@ -57,6 +60,15 @@
     <ClCompile Include="Reader-Writer-Lock.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Main\DeadLockProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountManager.cpp">
+      <Filter>Main\DeadLockProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="DeadLockProfiler.cpp">
+      <Filter>Main\DeadLockProfiler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -67,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="ConcurrentQueue.h">
       <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>Main\DeadLockProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountManager.h">
+      <Filter>Main\DeadLockProfiler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
