@@ -76,7 +76,32 @@ int main()
         cout << "Client Connected IP = " << ipAddress << endl;
 
         // TODO 
+        while (true)
+        {
+            char recvBuffer[1000];
 
+            const int32 recvLen = 
+                ::recv(clientSocket, recvBuffer, sizeof(recvBuffer), 0);
+
+            if (recvLen <= 0)
+            {
+                int32 errCode = ::WSAGetLastError();
+                cout << "recvErrorCode : " << errCode << endl;
+                return 0;
+            }
+
+            cout << "Recv Data! Data : " << recvBuffer << endl;
+            cout << "Recv Data! Len : " << recvLen << endl;
+
+            if (::send(clientSocket, recvBuffer, recvLen, 0) == SOCKET_ERROR)
+            {
+                int32 errCode = ::WSAGetLastError();
+                cout << "SendErrorCode : " << errCode << endl;
+                return 0;
+            }
+
+
+        }
     }
 
     // 윈속 종료
