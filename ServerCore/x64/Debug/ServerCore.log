@@ -5,6 +5,7 @@ C:\Users\park\Desktop\Github\GameServer\ServerCore\Lock.h(24,3): warning C4369: 
   CoreTLS.cpp
   DeadLockProfiler.cpp
   Lock.cpp
+  RefCounting.cpp
   ThreadManager.cpp
   Types.h
   코드를 생성하고 있습니다...

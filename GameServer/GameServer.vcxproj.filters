@@ -10,6 +10,12 @@
     <Filter Include="Main\DeadLockProfiler">
       <UniqueIdentifier>{7470faa1-2c4a-4f81-bdee-08d340d94e73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main\Memory">
+      <UniqueIdentifier>{5060e984-93b7-48dd-980d-6c5ea9e1f22a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\NetworkProgramming">
+      <UniqueIdentifier>{1d005324-6d4e-4d97-ac22-88c0c458aa7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2024-05-09_Multithread.cpp">
@@ -68,6 +74,12 @@
     </ClCompile>
     <ClCompile Include="DeadLockProfiler.cpp">
       <Filter>Main\DeadLockProfiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ReferenceCounting.cpp">
+      <Filter>Main\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket.cpp">
+      <Filter>Main\NetworkProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
