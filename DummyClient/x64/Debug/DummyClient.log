@@ -1,2 +1,4 @@
-﻿  DummyClient.cpp
-  DummyClient.vcxproj -> C:\Users\park\Desktop\Github\GameServer\Binary\Debug\DummyClient.exe
+﻿  pch.cpp
+C:\Users\park\Desktop\Github\GameServer\ServerCore\Lock.h(24,3): warning C4369: 'Lock::WRITE_THREAD_MASK':  열거자 값 '4294901760'을(를) 'int'(으)로 나타낼 수 없습니다. 값은 '4294901760'입니다.
+  DummyClient.cpp
+LINK : fatal error LNK1104: 'Debug\ServerCore.lib' 파일을 열 수 없습니다.

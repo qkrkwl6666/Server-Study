@@ -1,5 +1,4 @@
 #pragma once
-
 #define OUT
 // *****CRASH*****
 
@@ -9,6 +8,15 @@
 	__analysis_assume(crash != nullptr);	\
 	*crash = 0xDEADBEFF;					\
 }	
+
+// *****Memory*****
+#ifdef _DEBUG
+#define xAlloc(size) BaseAllocator::Alloc(size)
+#define xRelease(ptr) BaseAllocator::Release(ptr);
+#else
+
+#endif // 
+
 
 // *****Lock*****
 #define USE_MANY_LOCKS(count) Lock _locks[count];

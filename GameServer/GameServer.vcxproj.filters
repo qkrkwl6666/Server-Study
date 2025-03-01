@@ -81,6 +81,15 @@
     <ClCompile Include="Socket.cpp">
       <Filter>Main\NetworkProgramming</Filter>
     </ClCompile>
+    <ClCompile Include="Allocator.cpp">
+      <Filter>Main\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Main\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="2025-03-01_Allocator.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -97,6 +106,12 @@
     </ClInclude>
     <ClInclude Include="AccountManager.h">
       <Filter>Main\DeadLockProfiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Allocator.h">
+      <Filter>Main\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Main\Memory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

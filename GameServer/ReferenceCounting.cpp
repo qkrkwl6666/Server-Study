@@ -54,6 +54,7 @@ public:
 
 using MissileRef = TSharedPtr<Missile>;
 
+
 int main()
 {
 	WraightRef wraight(new Wraight());
@@ -65,21 +66,24 @@ int main()
 
 	// 레이스가 피격 당함
 	wraight->_hp = 0;
+
+	Wraight* rawPtr = new Wraight();
+
 	//delete wraight;
 	//wraight->ReleaseRef();
-	wraight = nullptr;
+	wraight = rawPtr;
 
-	while (true)
-	{
-		if (missile)
-		{
-			if (missile->Update())
-			{
-				//missile->ReleaseRef();
-				missile = nullptr;
-			}
-		}
-	}
+	//while (true)
+	//{
+	//	if (missile)
+	//	{
+	//		if (missile->Update())
+	//		{
+	//			//missile->ReleaseRef();
+	//			missile = nullptr;
+	//		}
+	//	}
+	//}
 
 	//missile->ReleaseRef();
 	missile = nullptr;
