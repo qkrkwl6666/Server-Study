@@ -1,33 +1,32 @@
 #include "pch.h"
-#include "CorePch.h"
 #include <iostream>
+#include "CorePch.h"
+#include <atomic>
 #include <mutex>
-#include <Windows.h>
+#include <windows.h>
 #include <future>
-#include "CoreMacro.h"
-#include "CoreGlobal.h"
 #include "ThreadManager.h"
-#include "AccountManager.h"
-#include "PlayerManager.h"
-#include "RefCounting.h"
 
-CoreGlobal coreGlobal;
+#include "RefCounting.h"
 
 class Wraight : public RefCountable
 {
 public:
-	int _hp = 100;
+	int _hp = 150;
 	int _posX = 0;
 	int _posY = 0;
 };
 
+using WraightRef = TSharedPtr<Wraight>;
+
 class Missile : public RefCountable
 {
 public:
-	void SetTarget(Wraight* target)
+	void SetTarget(WraightRef target)
 	{
 		_target = target;
-		target->AddRef();
+		// 중간에 개입 가능
+		//target->AddRef();
 	}
 
 	bool Update()
@@ -38,45 +37,51 @@ public:
 		int posX = _target->_posX;
 		int posY = _target->_posY;
 
-		if (_target->_hp <= 0)
+		// TODO : 쫓아간다
+
+		if (_target->_hp == 0)
 		{
-			_target->ReleaseRef();
+			//_target->ReleaseRef();
 			_target = nullptr;
 			return true;
 		}
 
-		// TODO : 쫓아간다
-
 		return false;
 	}
 
-private:
-	Wraight* _target = nullptr;
+	WraightRef _target = nullptr;
 };
+
+using MissileRef = TSharedPtr<Missile>;
 
 int main()
 {
-	Wraight* wraight = new Wraight();
-	Missile* missile = new Missile();
+	WraightRef wraight(new Wraight());
+	wraight->ReleaseRef();
+	MissileRef missile(new Missile());
+	missile->ReleaseRef();
+
 	missile->SetTarget(wraight);
 
 	// 레이스가 피격 당함
 	wraight->_hp = 0;
 	//delete wraight;
-	wraight->ReleaseRef();
+	//wraight->ReleaseRef();
 	wraight = nullptr;
 
 	while (true)
 	{
-		if (missile->Update())
+		if (missile)
 		{
-			missile->ReleaseRef();
-			missile = nullptr;
+			if (missile->Update())
+			{
+				//missile->ReleaseRef();
+				missile = nullptr;
+			}
 		}
 	}
 
-	missile->ReleaseRef();
+	//missile->ReleaseRef();
+	missile = nullptr;
 	//delete missile;
-
-	return 0;
 }
