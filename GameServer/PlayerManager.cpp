@@ -8,7 +8,7 @@ void PlayerManager::PlayerThenAccount()
 {
 	WRITE_LOCK;
 
-	this_thread::sleep_for(1s);
+	this_thread::sleep_for(std::chrono::seconds(1));
 
 	GAccountManager.Lock();
 }

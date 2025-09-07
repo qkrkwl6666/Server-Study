@@ -31,11 +31,11 @@ private:
 	int32 _attack;
 };
 
-int main()
-{
-	Knight* knight = xnew<Knight>(100);
-
-	xdelete(knight);
-
-	return 0;
-}
+// int main()
+// {
+// 	Knight* knight = xnew<Knight>(100);
+// 
+// 	xdelete(knight);
+// 
+// 	return 0;
+// }
