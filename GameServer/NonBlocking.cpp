@@ -3,7 +3,7 @@
 #include <WinSock2.h>
 #pragma comment(lib, "ws2_32.lib")
 
-int main()
+int nonBlocking()
 {
     WSAData wsaData;
 
@@ -94,5 +94,7 @@ int main()
     
     // 윈속 종료
     ::WSACleanup();
-    
+
+
+    return 0;
 }
